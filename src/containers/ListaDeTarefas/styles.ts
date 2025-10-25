@@ -8,7 +8,7 @@ export const Campo = styled.input`
   margin: 20px 0 0 10px;
   padding: 8px;
   border: none;
-  border-bottom: 3px solid;
+  border-bottom: 2px solid;
   background-color: #fff;
   font-weght: bold;
   color: #666666;

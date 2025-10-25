@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 import { Props } from '.'
 
-export const Card = styled.div<Props>`
+type PropsOmit = Omit<Props, 'contador' | 'legenda'>
+
+export const Card = styled.div<PropsOmit>`
   display: flex;
   width: 99.3%;
   align-items: center;
