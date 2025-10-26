@@ -8,7 +8,7 @@ export const Card = styled.div<PropsOmit>`
   display: flex;
   width: 99.3%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 6px;
 
   padding: 8px;
@@ -20,6 +20,7 @@ export const Card = styled.div<PropsOmit>`
 `
 
 export const Contador = styled.span`
+  margin-right: 15px;
   font-weight: bold;
   font-size: 20px;
 `
@@ -28,4 +29,9 @@ export const Label = styled.span`
   font-size: 14px;
   line-height: 1;
   font-size: 20px;
+`
+export const Icone = styled.span`
+  font-size: 20px;
+  margin-left: 15px;
+  display: inline-flex;
 `
