@@ -1,19 +1,31 @@
 import * as S from './styles'
-import { IconType } from 'react-icons'
 
-export type Props = {
-  ativo?: boolean
+type Props = {
+  ativo: boolean
+  titulo: string
   contador: number
-  legenda: string
-  icone?: IconType
+  icon: string
+  onClick: () => void
 }
 
-export const FiltroCard = ({ ativo, contador, legenda, icone }: Props) => (
-  <S.Card ativo={ativo}>
-    <S.Icone>
-      {icone && icone({ size: 20 })} {}
-    </S.Icone>
-    <S.Label>{legenda}</S.Label>
-    <S.Contador>{contador}</S.Contador>
-  </S.Card>
-)
+export const FiltroCard = ({
+  ativo,
+  titulo,
+  contador,
+  icon,
+  onClick
+}: Props) => {
+  return (
+    <>
+      <S.Filtro ativo={ativo} onClick={onClick}>
+        <S.Icon>
+          <img src={icon} alt={titulo} />
+        </S.Icon>
+        <S.Detalhes>
+          <p>{titulo}</p>
+          <span>{contador}</span>
+        </S.Detalhes>
+      </S.Filtro>
+    </>
+  )
+}

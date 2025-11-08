@@ -1,37 +1,70 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
-import { Props } from '.'
+type Props = {
+  ativo: boolean
+}
 
-type PropsOmit = Omit<Props, 'contador' | 'legenda'>
-
-export const Card = styled.div<PropsOmit>`
+export const Filtro = styled.div<Props>`
+  background-color: ${(props) =>
+    props.ativo ? variaveis.filtroAtivoFundo : 'inherit'};
+  border-radius: 2rem 0 0 2rem;
   display: flex;
-  width: 99.3%;
+  gap: 0.5rem;
   align-items: center;
+  padding: 0.5rem 0;
+  margin-right: -1rem;
+  position: relative;
+  height: 3rem;
+  margin-bottom: 0.25rem;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 2rem 0 0 2rem;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+  }
+  &:hover::after {
+    background-color: ${variaveis.overlayHoverFraco};
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const Icon = styled.div`
+  margin-left: 1.2rem;
+  display: flex;
+  position: relative;
+
+  img {
+    height: 20px;
+  }
+
+  &::after {
+    content: '';
+    border-radius: 50%;
+    inset: 0;
+    background-color: ${variaveis.overlayBrancoFraco};
+    position: absolute;
+    padding: 0.9rem;
+    top: -0.25rem;
+    left: -0.3rem;
+  }
+`
+
+export const Detalhes = styled.div`
+  display: flex;
   justify-content: space-between;
-  gap: 6px;
+  align-items: center;
+  width: 100%;
+  padding-right: 1rem;
+  font-size: 0.9rem;
 
-  padding: 8px;
-  border-radius: 50px 0 0 50px;
-  border: 1px solid ${(props) => (props.ativo ? '#eb550fff' : '#a1a1a1')};
-  background-color: ${(props) => (props.ativo ? '#eb550fff' : '#fcfcfc')};
-  color: ${(props) => (props.ativo ? '#313131ff' : '#5e5e5e')};
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-`
-
-export const Contador = styled.span`
-  margin-right: 15px;
-  font-weight: bold;
-  font-size: 20px;
-`
-
-export const Label = styled.span`
-  font-size: 14px;
-  line-height: 1;
-  font-size: 20px;
-`
-export const Icone = styled.span`
-  font-size: 20px;
-  margin-left: 15px;
-  display: inline-flex;
+  p {
+    font-weight: bold;
+  }
 `

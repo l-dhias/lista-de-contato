@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Aside = styled.aside`
   padding: 16px;
-  background-color: #bebbbbff;
+  background-color: #ddddddff;
   height: 100vh;
 `
 export const Filtros = styled.div`
