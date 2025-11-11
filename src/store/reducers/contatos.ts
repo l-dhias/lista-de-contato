@@ -8,74 +8,74 @@ type ContatoState = {
 
 const contatosPadrao: Contato[] = [
   {
-    nome: 'Brino ',
-    email: 'esse0@mail.com',
+    nome: 'Leo ',
+    email: 'teste.test0@mail.com',
     categoria: enums.Social.AMIGOS,
-    telefone: 16400289221,
+    telefone: 35000000000,
     id: 1,
     favorito: false
   },
   {
-    nome: 'Brinu ',
-    email: 'esse1@mail.com',
+    nome: 'Luis ',
+    email: 'teste.test1@mail.com',
     categoria: enums.Social.FAMILIA,
-    telefone: 16400289222,
+    telefone: 350000000001,
     id: 2,
     favorito: false
   },
   {
-    nome: 'Bruno ',
-    email: 'esse2@mail.com',
+    nome: 'Leila ',
+    email: 'teste.test2@mail.com',
     categoria: enums.Social.TRABALHO,
-    telefone: 16400289223,
+    telefone: 35000000002,
     id: 3,
     favorito: false
   },
   {
-    nome: 'Breno ',
-    email: 'esse3@mail.com',
+    nome: 'Margarida ',
+    email: 'teste.test3@mail.com',
     categoria: enums.Social.AMIGOS,
-    telefone: 16400289224,
+    telefone: 35000000003,
     id: 4,
     favorito: false
   },
   {
-    nome: 'Brene ',
-    email: 'esse4@mail.com',
+    nome: 'Antonio ',
+    email: 'teste.test4@mail.com',
     categoria: enums.Social.FAMILIA,
-    telefone: 16400289225,
+    telefone: 35000000004,
     id: 5,
     favorito: false
   },
   {
-    nome: 'Honey',
-    email: 'outro@mail.com',
+    nome: 'Luna',
+    email: 'teste.test5@mail.com',
     categoria: enums.Social.TRABALHO,
-    telefone: 15123123316,
+    telefone: 35000000005,
     id: 6,
     favorito: true
   },
   {
-    nome: 'Malone',
-    email: 'outro.uai0@mail.com',
+    nome: 'lucca',
+    email: 'teste.test6@mail.com',
     categoria: enums.Social.AMIGOS,
-    telefone: 15123123317,
+    telefone: 35000000006,
     id: 7,
     favorito: false
   },
   {
-    nome: 'Post Malone ',
-    email: 'outro.uai1@mail.com',
+    nome: 'Kaio ',
+    email: 'teste.test7@mail.com',
     categoria: enums.Social.FAMILIA,
-    telefone: 15123123318,
+    telefone: 35000000007,
     id: 8,
     favorito: false
   },
   {
-    nome: 'Past Malone',
-    email: 'outro.uai2@mail.com',
+    nome: 'Cristian',
+    email: 'teste.test8@mail.com',
     categoria: enums.Social.TRABALHO,
-    telefone: 15123123319,
+    telefone: 35000000008,
     id: 9,
     favorito: false
   }

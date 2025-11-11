@@ -4,8 +4,8 @@ import contatosReducer from './reducers/contatos'
 
 const store = configureStore({
   reducer: {
-    filtro: filtroReducer,
-    contatos: contatosReducer
+    contatos: contatosReducer,
+    filtro: filtroReducer
   }
 })
 
