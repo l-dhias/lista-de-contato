@@ -60,7 +60,7 @@ export const ListaDeContatos = () => {
       <S.Container>
         {contatosFiltrados.length == 0 ? (
           <>
-            <h3>🐱‍💻 Xiii, nenhum contato, vai ter que adicionar!</h3>
+            <h3> Nenhum contato encontrado</h3>
           </>
         ) : (
           contatosFiltrados.map((contatos) => (
