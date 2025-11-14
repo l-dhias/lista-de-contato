@@ -5,11 +5,16 @@ import { Container, EstiloGlobal } from './styles'
 
 import store from './store'
 import { Home } from './Pages/Home'
+import { CriarContato } from './Pages/Cadastro'
 
 const rotas = createBrowserRouter([
   {
     path: '/',
     element: <Home />
+  },
+  {
+    path: '/criar-contato',
+    element: <CriarContato />
   }
 ])
 

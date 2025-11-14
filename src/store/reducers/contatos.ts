@@ -1,12 +1,12 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
-import Contato from '../../models/Contato'
+import Contatos from '../../models/Contato'
 import * as enums from '../../utils/enums/Social'
 
-type ContatoState = {
-  itens: Contato[]
+type ContatosState = {
+  itens: Contatos[]
 }
 
-const contatosPadrao: Contato[] = [
+const contatosPadrao: Contatos[] = [
   {
     nome: 'Leo ',
     email: 'teste.test0@mail.com',
@@ -81,7 +81,7 @@ const contatosPadrao: Contato[] = [
   }
 ]
 
-function carregarContatos(): Contato[] {
+function carregarContatos(): Contatos[] {
   const contatosSalvos = localStorage.getItem('contatos')
   if (contatosSalvos) {
     try {
@@ -96,11 +96,11 @@ function carregarContatos(): Contato[] {
 
 const contatosSalvos = carregarContatos()
 
-const initialState: ContatoState = {
+const initialState: ContatosState = {
   itens: contatosSalvos.length > 0 ? contatosSalvos : contatosPadrao
 }
 
-function salvarContato(contatos: Contato[]) {
+function salvarContato(contatos: Contatos[]) {
   localStorage.setItem('contatos', JSON.stringify(contatos))
 }
 
@@ -114,7 +114,7 @@ const contatoSlice = createSlice({
       )
       salvarContato(state.itens)
     },
-    editar: (state, action: PayloadAction<Contato>) => {
+    editar: (state, action: PayloadAction<Contatos>) => {
       const indexDoContato = state.itens.findIndex(
         (c) => c.id === action.payload.id
       )
@@ -131,7 +131,7 @@ const contatoSlice = createSlice({
         salvarContato(state.itens)
       }
     },
-    cadastrar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
+    cadastrar: (state, action: PayloadAction<Omit<Contatos, 'id'>>) => {
       const nomeJaExiste = state.itens.find(
         (contato) =>
           contato.nome.toLowerCase() === action.payload.nome.toLowerCase()

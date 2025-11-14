@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import ContatoType from '../../models/Contato'
+import Contatos from '../../models/Contato'
 import {
   remover,
   editar,
@@ -8,7 +8,7 @@ import {
 import * as S from './styles'
 import { useDispatch } from 'react-redux'
 
-type Props = ContatoType
+type Props = Contatos
 
 const validaCategoria = (categoria: string) => {
   if (categoria === 'amigos') {

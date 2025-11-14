@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
-import Contatos from '../../components/Contatos'
-import ContatoType from '../../models/Contato'
+import Contato from '../../components/Contatos'
+import Contatos from '../../models/Contato'
 import { Content } from '../../styles'
 import * as S from './styles'
 import type { RootReducer } from '../../store'
@@ -11,7 +11,7 @@ export const ListaDeContatos = () => {
   const { criterio } = useSelector((state: RootReducer) => state.filtro)
   const [termoBusca, setTermoBusca] = useState('')
 
-  const filtraContatos = (): ContatoType[] => {
+  const filtraContatos = (): Contatos[] => {
     let contatosFiltrados = itens
 
     if (criterio && criterio !== 'todos') {
@@ -63,15 +63,15 @@ export const ListaDeContatos = () => {
             <h3>🐱‍💻 Xiii, nenhum contato, vai ter que adicionar!</h3>
           </>
         ) : (
-          contatosFiltrados.map((contato) => (
-            <Contatos
-              key={contato.id}
-              categoria={contato.categoria}
-              email={contato.email}
-              nome={contato.nome}
-              telefone={contato.telefone}
-              id={contato.id}
-              favorito={contato.favorito}
+          contatosFiltrados.map((contatos) => (
+            <Contato
+              key={contatos.id}
+              categoria={contatos.categoria}
+              email={contatos.email}
+              nome={contatos.nome}
+              telefone={contatos.telefone}
+              id={contatos.id}
+              favorito={contatos.favorito}
             />
           ))
         )}

@@ -31,7 +31,7 @@ export const BarraLateral = ({ mostrarFiltros }: Props) => {
       <S.Aside>
         <S.TituloPrincipal to={'/'}>
           <S.Logo>
-            <img src="contact.png" alt="logo" />
+            <img src="icons8-.png" alt="logo" />
           </S.Logo>
           <h1> Lista</h1>
         </S.TituloPrincipal>

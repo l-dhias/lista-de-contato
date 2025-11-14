@@ -1,6 +1,6 @@
 import * as enums from '../utils/enums/Social'
 
-class Contato {
+class Contatos {
   nome: string
   email: string
   categoria: enums.Social
@@ -24,5 +24,4 @@ class Contato {
     this.favorito = favorito
   }
 }
-
-export default Contato
+export default Contatos
